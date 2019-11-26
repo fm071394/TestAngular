@@ -14,7 +14,7 @@ export class AllEmojiComponent implements OnInit {
 
   emojis: Emoji[] = window.history.state.emojis ? window.history.state.emojis : [];
   searchEmoji: Emoji[];
-
+  
   searchValue: string = "";
 
   constructor(
@@ -32,7 +32,6 @@ export class AllEmojiComponent implements OnInit {
   }
 
   getEmojis(): void {
-    
     this.emojiService.getEmojis()
       .subscribe(emojis => {
         this.emojis = Object.keys(emojis)
@@ -42,13 +41,10 @@ export class AllEmojiComponent implements OnInit {
   }
 
   favorite(emoji: Emoji) {
-
     emoji["favorite"] = !emoji["favorite"];
-    
   }
   
   delete(emoji: Emoji) {
-
     emoji["favorite"] = false;
     emoji["remove"] = true;
 

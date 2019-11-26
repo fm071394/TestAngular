@@ -20,14 +20,12 @@ export class FavoriteEmojiComponent implements OnInit {
   }
 
   noFavorite(emoji: Emoji) {
-
     emoji["favorite"] = false;
 
     this.filterEmoji();
   }
 
   delete(emoji: Emoji) {
-
     emoji["favorite"] = false;
     emoji["remove"] = true;
 

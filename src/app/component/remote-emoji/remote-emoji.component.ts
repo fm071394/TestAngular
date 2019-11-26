@@ -20,7 +20,6 @@ export class RemoteEmojiComponent implements OnInit {
   }
 
   restore(emoji: Emoji) {
-
     emoji["favorite"] = false;
     emoji["remove"] = false;
 
